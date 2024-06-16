@@ -1,0 +1,11 @@
+Model Information:
+* title:	2013 Cavallo CSE GT3
+* source:	https://sketchfab.com/3d-models/2013-cavallo-cse-gt3-180092366ce14787a8b932aad882da80
+* author:	RBLXSupercars (https://sketchfab.com/RBLXSupercars)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "2013 Cavallo CSE GT3" (https://sketchfab.com/3d-models/2013-cavallo-cse-gt3-180092366ce14787a8b932aad882da80) by RBLXSupercars (https://sketchfab.com/RBLXSupercars) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
