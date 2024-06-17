@@ -491,121 +491,241 @@
         function createscene(container, object, x, y, z) {
 
 
-            
-            var scene = new THREE.Scene();
-            scene.add(new THREE.AxesHelper());
-            var camera = new THREE.PerspectiveCamera(35, 1200 / 850, 0.1, 1000);
-
-
-            var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
-            renderer.setSize(1200, 850);
-            container.appendChild(renderer.domElement);
-
-            var loader = new GLTFLoader();//gltfloader
-            var obj = new THREE.Object3D();//object
-
-            // obj.position.set(position.x, position.y, position.z);
-            //    obj.scale.set(2,2,2);
-            // scene.backgroundColor = 0x000000;
-            const pivot = new THREE.Group();
-            loader.load(object, function (gltf) {
-                obj = gltf.scene;
-                // scene.add(gltf.scene);
-
-                scene.add(pivot);
-                pivot.add(obj);
-
-                const box = new THREE.Box3().setFromObject(obj);
-                const centre = new THREE.Vector3();
-                box.getCenter(centre);
-                obj.position.sub(centre);
-                animate(pivot);
-
-            });
-
-            var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
-            scene.add(light);
-            camera.position.set(x, y, z);
-
-
-            //animation part
-
-
-            // let tl = gsap.timeline({});
-            gsap.to(scene.rotation, {
-                y: -3.99,//y=-2.79
-                ease: Power1.easeInOut,
-
-
-                scrollTrigger: {
-                    trigger: ".page1",
-                    start: "top 60px",
-
-                    scrub: 2,
-                    // pin: true
+            if (window.innerWidth>=769) {
+                var scene = new THREE.Scene();
+                scene.add(new THREE.AxesHelper());
+                var camera = new THREE.PerspectiveCamera(35, 1200 / 850, 0.1, 1000);
+    
+    
+                var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
+                renderer.setSize(1200, 850);
+                container.appendChild(renderer.domElement);
+    
+                var loader = new GLTFLoader();//gltfloader
+                var obj = new THREE.Object3D();//object
+    
+                // obj.position.set(position.x, position.y, position.z);
+                //    obj.scale.set(2,2,2);
+                // scene.backgroundColor = 0x000000;
+                const pivot = new THREE.Group();
+                loader.load(object, function (gltf) {
+                    obj = gltf.scene;
+                    // scene.add(gltf.scene);
+    
+                    scene.add(pivot);
+                    pivot.add(obj);
+    
+                    const box = new THREE.Box3().setFromObject(obj);
+                    const centre = new THREE.Vector3();
+                    box.getCenter(centre);
+                    obj.position.sub(centre);
+                    animate(pivot);
+    
+                });
+    
+                var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
+                scene.add(light);
+                camera.position.set(x, y, z);
+    
+    
+                //animation part
+    
+    
+                // let tl = gsap.timeline({});
+                gsap.to(scene.rotation, {
+                    y: -3.99,//y=-2.79
+                    ease: Power1.easeInOut,
+    
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 60px",
+    
+                        scrub: 2,
+                        // pin: true
+                    }
+                })
+                // gsap.to("#model",{
+                //     y:100,
+                //     // duration:5,
+                //     scrollTrigger: {
+                //         trigger: ".page1",
+                //         // start: "top top",
+                //         // end: "bottom bottom",
+                //         // duration: 2,
+                //         markers: true,
+                //         scrub: 2,
+                //         // pin:true
+                //     }
+    
+                // })
+                gsap.to(camera.position, {
+                    x: 0,
+                    z: 195,
+                    ease: Power1.easeInOut,
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 10%",
+    
+                        scrub: 2,
+    
+                    }
+                })
+                // gsap.to(pivot.position, {
+                //     y: -195,
+                //     ease: Power1.easeInOut,
+    
+                //     scrollTrigger: {
+                //         trigger: ".page1",
+                //         start: "top 10%",
+    
+                //         scrub: 2,
+    
+                //     }
+                // })
+                gsap.to(container, {
+                    y: 1090,
+                    x: -280,
+                    ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 0%",
+    
+                        scrub: 1.8,
+    
+                    }
+                })
+    
+                //object render
+                function animate(pivot) {
+                    requestAnimationFrame(() => animate(pivot));
+                    // console.log(obj);
+                    pivot.rotation.y = -19.5;
+    
+    
+                    renderer.render(scene, camera);
                 }
-            })
-            // gsap.to("#model",{
-            //     y:100,
-            //     // duration:5,
-            //     scrollTrigger: {
-            //         trigger: ".page1",
-            //         // start: "top top",
-            //         // end: "bottom bottom",
-            //         // duration: 2,
-            //         markers: true,
-            //         scrub: 2,
-            //         // pin:true
-            //     }
-
-            // })
-            gsap.to(camera.position, {
-                x: 0,
-                z: 195,
-                ease: Power1.easeInOut,
-
-                scrollTrigger: {
-                    trigger: ".page1",
-                    start: "top 10%",
-
-                    scrub: 2,
-
+                
+            }
+            else{
+                var scene = new THREE.Scene();
+                scene.add(new THREE.AxesHelper());
+                var camera = new THREE.PerspectiveCamera(65, 300 / 350, 0.1, 1000);
+    
+    
+                var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                container.appendChild(renderer.domElement);
+    
+                var loader = new GLTFLoader();//gltfloader
+                var obj = new THREE.Object3D();//object
+    
+                // obj.position.set(position.x, position.y, position.z);
+                //    obj.scale.set(2,2,2);
+                // scene.backgroundColor = 0x000000;
+                const pivot = new THREE.Group();
+                loader.load(object, function (gltf) {
+                    obj = gltf.scene;
+                    // scene.add(gltf.scene);
+    
+                    scene.add(pivot);
+                    pivot.add(obj);
+    
+                    const box = new THREE.Box3().setFromObject(obj);
+                    const centre = new THREE.Vector3();
+                    box.getCenter(centre);
+                    obj.position.sub(centre);
+                    animate(pivot);
+    
+                });
+    
+                var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
+                scene.add(light);
+                camera.position.set(x, y, z);
+    
+    
+                //animation part
+    
+    
+                // let tl = gsap.timeline({});
+                gsap.to(scene.rotation, {
+                    y: -3.99,//y=-2.79
+                    ease: Power1.easeInOut,
+    
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 60px",
+    
+                        scrub: 2,
+                        // pin: true
+                    }
+                })
+                // gsap.to("#model",{
+                //     y:100,
+                //     // duration:5,
+                //     scrollTrigger: {
+                //         trigger: ".page1",
+                //         // start: "top top",
+                //         // end: "bottom bottom",
+                //         // duration: 2,
+                //         markers: true,
+                //         scrub: 2,
+                //         // pin:true
+                //     }
+    
+                // })
+                gsap.to(camera.position, {
+                    
+                    z: 195,
+                    ease: Power1.easeInOut,
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 10%",
+    
+                        scrub: 2,
+    
+                    }
+                })
+                // gsap.to(pivot.position, {
+                //     y: -195,
+                //     ease: Power1.easeInOut,
+    
+                //     scrollTrigger: {
+                //         trigger: ".page1",
+                //         start: "top 10%",
+    
+                //         scrub: 2,
+    
+                //     }
+                // })
+                gsap.to(container, {
+                    y: 1090,
+                    // x: -280,
+                    ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
+    
+                    scrollTrigger: {
+                        trigger: ".page1",
+                        start: "top 0%",
+    
+                        scrub: 1.8,
+    
+                    }
+                })
+    
+                //object render
+                function animate(pivot) {
+                    requestAnimationFrame(() => animate(pivot));
+                    // console.log(obj);
+                    pivot.rotation.y = -0.6;
+    
+    
+                    renderer.render(scene, camera);
                 }
-            })
-            // gsap.to(pivot.position, {
-            //     y: -195,
-            //     ease: Power1.easeInOut,
 
-            //     scrollTrigger: {
-            //         trigger: ".page1",
-            //         start: "top 10%",
-
-            //         scrub: 2,
-
-            //     }
-            // })
-            gsap.to(container, {
-                y: 1090,
-                x: -280,
-                ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
-
-                scrollTrigger: {
-                    trigger: ".page1",
-                    start: "top 0%",
-
-                    scrub: 1.8,
-
-                }
-            })
-
-            //object render
-            function animate(pivot) {
-                requestAnimationFrame(() => animate(pivot));
-                // console.log(obj);
-                pivot.rotation.y = -19.5;
-
-
-                renderer.render(scene, camera);
             }
 
         }
@@ -613,7 +733,7 @@
         //parameters
         const container1 = document.getElementById("model");
         const object1 = "bicycle/scene.gltf";
-        createscene(container1, object1, -50, 0, 300);//z60
+        createscene(container1, object1, -5, 0, 300);//z60
 
     </script>
 
