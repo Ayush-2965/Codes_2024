@@ -62,14 +62,14 @@ nav {
 }
 
 .capsule {
-    width: 120px;
+    width: 135px;
     height: 34px;
     border-radius: 20px;
-    background-color: #dbdbdb5e;
+    /* background-color: #dbdbdb5e; */
     text-align: center;
     display: flex;
     justify-content: center;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     align-items: center;
     text-transform: capitalize;
     cursor: pointer;
@@ -78,13 +78,13 @@ nav {
 
 .capsule h4 {
     font-family: "Lexend Deca", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 15px;
     font-weight: 400;
 }
 
 .capsule i {
-    font-size: 24px;
+    font-size: 28px;
 
 }
 
@@ -92,6 +92,8 @@ nav {
     /* width: 190px;
     height: 30px; */
     display: flex;
+    align-items: center;
+    justify-content: center;
     /* gap: 15px; */
 
 }
@@ -149,23 +151,25 @@ nav {
 }
 
 .content h1 {
-
-    font-size: 160px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 180px;
     text-transform: capitalize;
     color: rgba(255, 0, 0, 0.561);
+    font-weight: 600;
     line-height: 170px;
     letter-spacing: 2px;
 
 }
 
 .content2 {
+    font-family: "Lexend Deca", sans-serif;
     width: 1000px;
     height: 150px;
     font-size: 50px;
     color: rgba(0, 0, 0, 0.285);
     margin: 55px 0 0 100px;
     text-shadow: -3px 0px 0px #000000ad;
-    ;
+    
 }
 
 .button {
@@ -182,7 +186,8 @@ nav {
     margin: 55px 0 0 100px;
 
     color: white;
-    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
@@ -235,6 +240,7 @@ nav {
     display: flex;
     flex-direction: column;
     text-transform: capitalize;
+    margin-top: 60px;
     padding: 15px 0 0 60px;
     letter-spacing: 1.6px;
 }
@@ -318,8 +324,8 @@ nav {
     background-color: white;
     padding: 12px 17px;
     border-radius: 7px;
-    top: 52%;
-    left: 30%;
+    top: 54%;
+    left: 32%;
 }
 
 .comp2 {
@@ -328,8 +334,8 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 30%;
-    left: 69%;
+    top: 37%;
+    left: 59%;
 }
 
 .comp3 {
@@ -339,7 +345,7 @@ nav {
 
     border-radius: 7px;
     top: 48%;
-    left: 76%;
+    left: 62%;
 }
 
 .comp4 {
@@ -358,8 +364,8 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 21%;
-    left: 59%;
+    top: 28%;
+    left: 52%;
     opacity: 0;
 }
 
@@ -369,8 +375,9 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 23%;
-    left: 72%;
+    top: 33%;
+    left: 60%;
+
     opacity: 0;
 }
 
@@ -381,7 +388,8 @@ nav {
 
     border-radius: 7px;
     top: 57%;
-    left: 80%;
+    left: 65%;
+
     opacity: 0;
 }
 
@@ -391,8 +399,9 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 12%;
-    left: 35%;
+    top: 24%;
+    left: 34%;
+
     opacity: 0;
 }
 
@@ -402,8 +411,8 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 32%;
-    left: 40%;
+    top: 36%;
+    left: 43%;
     opacity: 0;
 }
 
@@ -413,8 +422,9 @@ nav {
     padding: 12px 17px;
 
     border-radius: 7px;
-    top: 21%;
-    left: 72%;
+    top: 25%;
+    left: 60%;
+
     opacity: 0;
 }
 
@@ -451,6 +461,7 @@ nav {
 .overlay {
     position: absolute;
     top: 0;
+    z-index: 10;
     background-color: transparent;
 }
 
@@ -959,7 +970,10 @@ nav {
     height: 38px;
     font-size: 18px;
     /* border: none; */
-    padding: 1px 5px 0 8px;
+    padding: 1px 5px 0 15px;
+    border: none;
+    border-bottom: 1px solid rgb(161, 161, 161);
+    outline: none;
     border-radius: 4px;
     min-width: 200px;
     background-color: #656565a8;
@@ -971,6 +985,7 @@ nav {
     font-size: 18px;
     font-weight: lighter;
     color: rgba(255, 255, 255, 0.708);
+    
 }
 
 .r2c2 button {
@@ -1235,12 +1250,12 @@ nav {
         min-width: 100%;
     }
 
-    /* .page1{
-        height: 100vh;
+    .page1{
+        height: 80vh;
     }
     .page1 .part2{
         height: 100vh;
-    } */
+    }
     .content {
 
         min-width: 200px;
@@ -1258,6 +1273,7 @@ nav {
         margin: 10px 0 0 15px;
         height: max-content;
         font-size: 24px;
+        text-shadow: 1.2px 0px 0px #000000ad;
     }
 
     .button {
@@ -1278,6 +1294,7 @@ nav {
         min-width: 200px;
         font-size: 22px;
         text-align: center;
+        margin: 0;
         padding: 0 0 0 10px;
     }
 
@@ -1341,16 +1358,22 @@ nav {
         top: 0;
         left: 0;
     }
+    .overlay{
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
 
     .card .img {
         width: 120px;
-        height: 160px;
+        height: 80px;
     }
 
     .innercont {
         /* width: 100%; */
         margin-top: 5px;
         padding: 0 6px;
+        height: 50px;
         /* font-size: 8px; */
     }
 
@@ -1383,10 +1406,13 @@ nav {
         width: calc(100vw/1.2);
         height: calc(100vw/2);
     }
-
+    .wrapper .carousel{
+        outline: none;
+    }
     .carousel .reviewcard {
         /* width: calc(100vw/1.2); */
         height: calc(100vw/2);
+        /* border-radius: 24px; */
     }
 
     .reviewcard .reviewcontent {
@@ -1495,6 +1521,34 @@ nav {
     }
 }
 @media only screen and (max-width: 425px){
+    nav{
+        height: 40px;
+    }
+    .nav{
+        height: 40px;
+    }
+    .nav svg{
+        height: 40px;
+    }
+    .endcontent{
+        height: 30px;
+        gap: 5px;
+    }
+    .endcontent i{
+        font-size: 16px;
+    }
+    .endcontent .righticon{
+        font-size: 20px;
+    }
+    .endcontent .profile{
+        margin-top: 2px;
+        width: 50px;
+        height: 20px;
+    }
+    .endcontent .profileicon{
+        height: 16px;
+        width: 16px;
+    }
     .reviewcard .reviewimg {
         /* display: none; */
         width: 35px;

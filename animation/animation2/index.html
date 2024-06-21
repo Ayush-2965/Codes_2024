@@ -385,7 +385,7 @@
                     </div>
                     <div class="r1c2">
                         <div class="flexcontainer">
-                            <div class="topgridcontent" >Product</div>
+                            <div class="topgridcontent">Product</div>
                             <div class="flexcontainer">
                                 <div class="gridcontent hoverlink">L Series</div>
                                 <div class="gridcontent hoverlink">I Series</div>
@@ -395,37 +395,37 @@
                             </div>
                         </div>
                         <div class="flexcontainer">
-                            <div class="topgridcontent">Company</div> 
+                            <div class="topgridcontent">Company</div>
                             <div class="gridcontent flexcontainer">
-                            <div class="hoverlink">Blogs</div>
-                            <div class="hoverlink">Become a dealer</div>
-                        </div>
+                                <div class="hoverlink">Blogs</div>
+                                <div class="hoverlink">Become a dealer</div>
+                            </div>
                         </div>
                         <div class="flexcontainer"">
-                            <div class="topgridcontent">Community</div> 
-                            <div class="gridcontent flexcontainer">
-                                <div class="hoverlink">About Us</div>
-                                <div class="hoverlink">Contact Us</div>
-                                <div class="hoverlink">Press Kit</div>
-                            </div>
+                            <div class=" topgridcontent">Community</div>
+                        <div class="gridcontent flexcontainer">
+                            <div class="hoverlink">About Us</div>
+                            <div class="hoverlink">Contact Us</div>
+                            <div class="hoverlink">Press Kit</div>
                         </div>
-                        <div class="flexcontainer">
-                            <div class="topgridcontent">Service</div>
-                            <div class="gridcontent flexcontainer">
-                                <div class="hoverlink">Terms & Condition</div>
-                                <div class="hoverlink">Privacy Policy</div>
-                                <div class="hoverlink">Return Policy</div>
-                                <div class="hoverlink">Warranty</div>
-                            </div>
+                    </div>
+                    <div class="flexcontainer">
+                        <div class="topgridcontent">Service</div>
+                        <div class="gridcontent flexcontainer">
+                            <div class="hoverlink">Terms & Condition</div>
+                            <div class="hoverlink">Privacy Policy</div>
+                            <div class="hoverlink">Return Policy</div>
+                            <div class="hoverlink">Warranty</div>
                         </div>
-                        <!-- <div class="flexcontainer">
+                    </div>
+                    <!-- <div class="flexcontainer">
                             <div class="gridcontent hoverlink">L Series</div>
                             <div class="gridcontent hoverlink">I Series</div>
                             <div class="gridcontent hoverlink">F Series
                             </div>
                             <div class="gridcontent hoverlink">E Series</div>
                         </div> -->
-                        <!-- <div class="gridcontent flexcontainer">
+                    <!-- <div class="gridcontent flexcontainer">
                             <div class="hoverlink">Blogs</div>
                             <div class="hoverlink">Become a dealer</div>
                         </div>
@@ -440,31 +440,31 @@
                             <div class="hoverlink">Return Policy</div>
                             <div class="hoverlink">Warranty</div>
                         </div> -->
+                </div>
+                <div class="r2c1">
+                    <div class="topgridcontent">Contact Us
+                        <div class="gridcontent hoverlink">contactus@ghmev.com</div>
                     </div>
-                    <div class="r2c1">
-                        <div class="topgridcontent">Contact Us
-                            <div class="gridcontent hoverlink">contactus@ghmev.com</div>
-                        </div>
-                        <div class="topgridcontent">Service Support
-                            <div class="gridcontent">+91 8977938474 | service@ghmev.com</div>
-                        </div>
-                        <div class="topgridcontent">Address
-                            <div class="gridcontent">Gear Head Motors Head Quarter's, plot 30 NK Towers , Aurnodaya
-                                Co-Operative Society, Hyderabad, Telangana 500081.</div>
-                        </div>
+                    <div class="topgridcontent">Service Support
+                        <div class="gridcontent">+91 8977938474 | service@ghmev.com</div>
                     </div>
-                    <div class="r2c2 flexcontainer">
-                        <div class="topgridcontent subscribe">subscribe to our newsletter</div>
-                        <div class="gridcontent">To get special offers, free giveaways, and once-in-a-lifetime deals.
-                        </div>
-                        <div class="email contact">
-                            <input type="text" placeholder="Enter email">
-                            <button>Subscribe</button>
-                        </div>
+                    <div class="topgridcontent">Address
+                        <div class="gridcontent">Gear Head Motors Head Quarter's, plot 30 NK Towers , Aurnodaya
+                            Co-Operative Society, Hyderabad, Telangana 500081.</div>
+                    </div>
+                </div>
+                <div class="r2c2 flexcontainer">
+                    <div class="topgridcontent subscribe">subscribe to our newsletter</div>
+                    <div class="gridcontent">To get special offers, free giveaways, and once-in-a-lifetime deals.
+                    </div>
+                    <div class="email contact">
+                        <input type="text" placeholder="Enter email">
+                        <button>Subscribe</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -488,252 +488,146 @@
         // gsap.registerPlugin(ScrollTrigger);
 
         //funtion for scene creation
-        function createscene(container, object, x, y, z) {
+        function createscene(container, object, x, y, z, percamlocalz, percamx, percamy, rendx, rendy,contx,conty) {
+
+            var scene = new THREE.Scene();
+            scene.add(new THREE.AxesHelper());
+            var camera = new THREE.PerspectiveCamera(percamlocalz, percamx / percamy, 0.1, 1000);
 
 
-            if (window.innerWidth>=769) {
-                var scene = new THREE.Scene();
-                scene.add(new THREE.AxesHelper());
-                var camera = new THREE.PerspectiveCamera(35, 1200 / 850, 0.1, 1000);
-    
-    
-                var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
-                renderer.setSize(1200, 850);
-                container.appendChild(renderer.domElement);
-    
-                var loader = new GLTFLoader();//gltfloader
-                var obj = new THREE.Object3D();//object
-    
-                // obj.position.set(position.x, position.y, position.z);
-                //    obj.scale.set(2,2,2);
-                // scene.backgroundColor = 0x000000;
-                const pivot = new THREE.Group();
-                loader.load(object, function (gltf) {
-                    obj = gltf.scene;
-                    // scene.add(gltf.scene);
-    
-                    scene.add(pivot);
-                    pivot.add(obj);
-    
-                    const box = new THREE.Box3().setFromObject(obj);
-                    const centre = new THREE.Vector3();
-                    box.getCenter(centre);
-                    obj.position.sub(centre);
-                    animate(pivot);
-    
-                });
-    
-                var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
-                scene.add(light);
-                camera.position.set(x, y, z);
-    
-    
-                //animation part
-    
-    
-                // let tl = gsap.timeline({});
-                gsap.to(scene.rotation, {
-                    y: -3.99,//y=-2.79
-                    ease: Power1.easeInOut,
-    
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 60px",
-    
-                        scrub: 2,
-                        // pin: true
-                    }
-                })
-                // gsap.to("#model",{
-                //     y:100,
-                //     // duration:5,
-                //     scrollTrigger: {
-                //         trigger: ".page1",
-                //         // start: "top top",
-                //         // end: "bottom bottom",
-                //         // duration: 2,
-                //         markers: true,
-                //         scrub: 2,
-                //         // pin:true
-                //     }
-    
-                // })
-                gsap.to(camera.position, {
-                    x: 0,
-                    z: 195,
-                    ease: Power1.easeInOut,
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 10%",
-    
-                        scrub: 2,
-    
-                    }
-                })
-                // gsap.to(pivot.position, {
-                //     y: -195,
-                //     ease: Power1.easeInOut,
-    
-                //     scrollTrigger: {
-                //         trigger: ".page1",
-                //         start: "top 10%",
-    
-                //         scrub: 2,
-    
-                //     }
-                // })
-                gsap.to(container, {
-                    y: 1090,
-                    x: -280,
-                    ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 0%",
-    
-                        scrub: 1.8,
-    
-                    }
-                })
-    
-                //object render
-                function animate(pivot) {
-                    requestAnimationFrame(() => animate(pivot));
-                    // console.log(obj);
-                    pivot.rotation.y = -19.5;
-    
-    
-                    renderer.render(scene, camera);
+            var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
+            renderer.setSize(rendx, rendy);
+            container.appendChild(renderer.domElement);
+
+            var loader = new GLTFLoader();//gltfloader
+            var obj = new THREE.Object3D();//object
+
+            // obj.position.set(position.x, position.y, position.z);
+            //    obj.scale.set(2,2,2);
+            // scene.backgroundColor = 0x000000;
+            const pivot = new THREE.Group();
+            loader.load(object, function (gltf) {
+                obj = gltf.scene;
+                // scene.add(gltf.scene);
+
+                scene.add(pivot);
+                pivot.add(obj);
+
+                const box = new THREE.Box3().setFromObject(obj);
+                const centre = new THREE.Vector3();
+                box.getCenter(centre);
+                obj.position.sub(centre);
+                animate(pivot);
+
+            });
+
+            var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
+            scene.add(light);
+            camera.position.set(x, y, z);
+
+
+            //animation part
+
+
+            // let tl = gsap.timeline({});
+            gsap.to(scene.rotation, {
+                y: -3.99,//y=-2.79
+                ease: Power1.easeInOut,
+
+
+                scrollTrigger: {
+                    trigger: ".page1",
+                    start: "top 60px",
+
+                    scrub: 2,
+                    // pin: true
                 }
-                
-            }
-            else{
-                var scene = new THREE.Scene();
-                scene.add(new THREE.AxesHelper());
-                var camera = new THREE.PerspectiveCamera(65, 300 / 350, 0.1, 1000);
-    
-    
-                var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });//renderer
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                container.appendChild(renderer.domElement);
-    
-                var loader = new GLTFLoader();//gltfloader
-                var obj = new THREE.Object3D();//object
-    
-                // obj.position.set(position.x, position.y, position.z);
-                //    obj.scale.set(2,2,2);
-                // scene.backgroundColor = 0x000000;
-                const pivot = new THREE.Group();
-                loader.load(object, function (gltf) {
-                    obj = gltf.scene;
-                    // scene.add(gltf.scene);
-    
-                    scene.add(pivot);
-                    pivot.add(obj);
-    
-                    const box = new THREE.Box3().setFromObject(obj);
-                    const centre = new THREE.Vector3();
-                    box.getCenter(centre);
-                    obj.position.sub(centre);
-                    animate(pivot);
-    
-                });
-    
-                var light = new THREE.HemisphereLight(0xffffff, 0x000000, 10);
-                scene.add(light);
-                camera.position.set(x, y, z);
-    
-    
-                //animation part
-    
-    
-                // let tl = gsap.timeline({});
-                gsap.to(scene.rotation, {
-                    y: -3.99,//y=-2.79
-                    ease: Power1.easeInOut,
-    
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 60px",
-    
-                        scrub: 2,
-                        // pin: true
-                    }
-                })
-                // gsap.to("#model",{
-                //     y:100,
-                //     // duration:5,
-                //     scrollTrigger: {
-                //         trigger: ".page1",
-                //         // start: "top top",
-                //         // end: "bottom bottom",
-                //         // duration: 2,
-                //         markers: true,
-                //         scrub: 2,
-                //         // pin:true
-                //     }
-    
-                // })
-                gsap.to(camera.position, {
-                    
-                    z: 195,
-                    ease: Power1.easeInOut,
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 10%",
-    
-                        scrub: 2,
-    
-                    }
-                })
-                // gsap.to(pivot.position, {
-                //     y: -195,
-                //     ease: Power1.easeInOut,
-    
-                //     scrollTrigger: {
-                //         trigger: ".page1",
-                //         start: "top 10%",
-    
-                //         scrub: 2,
-    
-                //     }
-                // })
-                gsap.to(container, {
-                    y: 1090,
-                    // x: -280,
-                    ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
-    
-                    scrollTrigger: {
-                        trigger: ".page1",
-                        start: "top 0%",
-    
-                        scrub: 1.8,
-    
-                    }
-                })
-    
-                //object render
-                function animate(pivot) {
-                    requestAnimationFrame(() => animate(pivot));
-                    // console.log(obj);
-                    pivot.rotation.y = -0.6;
-    
-    
-                    renderer.render(scene, camera);
-                }
+            })
+            // gsap.to("#model",{
+            //     y:100,
+            //     // duration:5,
+            //     scrollTrigger: {
+            //         trigger: ".page1",
+            //         // start: "top top",
+            //         // end: "bottom bottom",
+            //         // duration: 2,
+            //         markers: true,
+            //         scrub: 2,
+            //         // pin:true
+            //     }
 
+            // })
+            gsap.to(camera.position, {
+                x: 0,
+                z: 275,
+                ease: Power1.easeInOut,
+
+                scrollTrigger: {
+                    trigger: ".page1",
+                    start: "top 10%",
+
+                    scrub: 2,
+
+                }
+            })
+            // gsap.to(pivot.position, {
+            //     y: -195,
+            //     ease: Power1.easeInOut,
+
+            //     scrollTrigger: {
+            //         trigger: ".page1",
+            //         start: "top 10%",
+
+            //         scrub: 2,
+
+            //     }
+            // })
+            gsap.to(container, {
+                y: contx,
+                x: conty,
+                ease: 'CustomEase.create("custom", "M0,0 C0.35,0.249 0.4,0.762 1,1 ")',
+
+                scrollTrigger: {
+                    trigger: ".page1",
+                    start: "top 0%",
+
+                    scrub: 1.8,
+
+                }
+            })
+
+            //object render
+            function animate(pivot) {
+                requestAnimationFrame(() => animate(pivot));
+                // console.log(obj);
+                pivot.rotation.y = -19.5;
+
+
+                renderer.render(scene, camera);
             }
+
+
+        }
+        if (window.innerWidth >= 1440) {
+            //parameters
+            const container1 = document.getElementById("model");
+            const object1 = "bicycle/scene.gltf";
+            createscene(container1, object1, -110, 0, 300, 35, window.innerWidth, window.innerHeight, window.innerWidth, window.innerHeight,1090,0);//z60
+
+        }
+        else if (window.innerWidth >= 430) {
+            
+            const container1 = document.getElementById("model");
+            const object1 = "bicycle/scene.gltf";
+            createscene(container1, object1, -5, 0, 300, 70, innerWidth, innerHeight, window.innerWidth, window.innerHeight,1090,0);//z60
+        }
+        else{
+            const container1 = document.getElementById("model");
+            const object1 = "bicycle/scene.gltf";
+            createscene(container1, object1, -5, 0, 300, 80, innerWidth, innerHeight, window.innerWidth, window.innerHeight,530,0);//z60
 
         }
 
-        //parameters
-        const container1 = document.getElementById("model");
-        const object1 = "bicycle/scene.gltf";
-        createscene(container1, object1, -5, 0, 300);//z60
 
     </script>
 

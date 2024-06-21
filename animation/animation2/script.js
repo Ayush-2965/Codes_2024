@@ -66,8 +66,23 @@ gsap.to(".nav .profileicon", {
     }
 })
 gsap.to(".capsule", {
-    backgroundColor: "#ffffffeb",
-    outline:"0.5px solid black",
+    backgroundColor: "transparent",
+    color: "white",
+    // outline:"0.5px solid black",
+    scrollTrigger: {
+
+        trigger: ".page1",
+        
+        start: "top 0%",
+        end: "top 0%",
+        scrub: true,
+        // pin:true
+    }
+})
+gsap.to(".capsule i", {
+    // backgroundColor: "transparent",
+    color: "white",
+    // outline:"0.5px solid black",
     scrollTrigger: {
 
         trigger: ".page1",
