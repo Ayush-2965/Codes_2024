@@ -1,0 +1,666 @@
+@font-face {
+    font-family: "amazon";
+    src: url("Amazon\ Ember.ttf");
+}
+
+@font-face {
+    font-family: "amazon2";
+    src: url("Amazon\ Ember\ Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    /* min-width: 1000px; */
+    /* max-width: 100%; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    list-style-type: none;
+    color: rgb(162, 162, 162);
+    font-family: amazon;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.logo {
+    font-family: "amazon";
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: white;
+    padding-right: 60px;
+}
+
+.ri-account-circle-fill {
+    font-size: 41px;
+}
+
+.ri-search-line {
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.homeext{
+    position: absolute;
+    width: 100px;
+    height: 204px;
+    background-color: rgb(30, 30, 36);
+    top: -206px;
+    left: 629px;
+    z-index: 1;
+    /* opacity: 0.6; */
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    transition: ease-in;
+}
+
+
+.exttop{
+    height: 70px;
+    max-height: 50px;
+    padding-top: 15px;
+    padding-left: 13px;
+}
+.exttop:hover{
+    color: white;
+}
+.ext{
+    height: 70px;
+    max-height: 50px;
+    padding-top: 15px;
+    padding-left: 8px;
+}
+.ext:hover{
+    background-color: white;
+}
+
+ul {
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin: 0 20vw; */
+    padding-top: 10px;
+    padding-left: 0;
+    min-width: 800px;
+    justify-content: center;
+}
+
+
+.nav {
+
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    max-height: 50px;
+    min-height: auto;
+    min-width: 1000px;
+
+}
+
+.content1 {
+    display: flex;
+
+    /* height: 650px;
+    width: 100%; */
+    /* max-width: 100%; */
+    height: 600px;
+    background-color: blueviolet;
+    justify-content: start;
+    background-attachment: local;
+    background-image: url("https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg");
+    background-repeat: no-repeat;
+    background-position: top 0 right;
+    background-size: cover;
+    /* filter: brightness(1.1); */
+    position: relative;
+    /* min-width:1380px; */
+
+
+
+}
+
+.maincontent {
+    display: flex;
+    /* flex-flow: column nowrap; */
+    min-width: 620px;
+    flex-direction: column;
+}
+
+.signin {
+
+    background-image: linear-gradient(to right, black, black, black, black, black, black, black, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+    /* border: 2px solid white; */
+    color: azure;
+
+    height: 600px;
+    padding-top: 60px;
+    width: 54%;
+
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+
+}
+
+.signin :nth-child(1) {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 50px;
+    padding-bottom: 20px;
+    font-family: amazon;
+    margin: 20px 0 0 60px;
+
+}
+
+.signin :nth-child(2) {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-family: amazon;
+    margin: 20px 0 0 60px;
+}
+
+.signin :nth-child(3) {
+    width: 350px;
+    height: 35px;
+    font-size: 19px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: amazon2;
+    background-color: #0f79af;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 15px;
+    margin: 0px 0 0 60px;
+}
+
+
+.content2 {
+    display: flex;
+
+    height: 700px;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: start;
+
+    background-image: url("https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Right.jpg");
+    background-repeat: no-repeat;
+    background-position: top 0 right;
+    background-size: cover;
+    /* filter: brightness(1.1); */
+    position: relative;
+    min-width: 1150px;
+}
+
+.rent {
+
+    background-image: linear-gradient(to right, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+    /* border: 2px solid white; */
+    color: azure;
+
+    height: 600px;
+    padding-top: 60px;
+    width: 45%;
+
+    /* padding-left: 30px; */
+    display: flex;
+    flex-direction: column;
+    /* flex-shrink: calc(10*30); */
+
+
+}
+
+.rent :nth-child(1) {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45px;
+    padding-bottom: 20px;
+    font-family: amazon;
+    margin: 20px 0 0 60px;
+
+}
+
+.rent :nth-child(2) {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-family: amazon;
+    margin: 20px 0 0 60px;
+}
+
+.rent :nth-child(3) {
+    width: 350px;
+    height: 35px;
+    font-size: 19px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: amazon2;
+    background-color: #0f79af;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 15px;
+    margin: 0px 0 0 60px;
+}
+
+.content3 {
+    display: flex;
+    justify-content: center;
+    height: 840px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    min-width: 1150px;
+}
+
+.channel {
+    width: 45%;
+    height: 400px;
+    /* border: 2px solid black; */
+    margin-right: 50px;
+    margin-top: 10px;
+
+}
+
+.channel :nth-child(1) {
+    font-family: amazon;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.channel :nth-child(2) {
+    font-family: amazon;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.gridimg {
+    width: 45%;
+    height: 98%;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1330px) {
+    .gridimg {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .content3 {
+        height: 100%;
+    }
+}
+
+
+.content4 {
+    display: flex;
+
+    height: 700px;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: start;
+    margin-top: 30px;
+    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/digital/video/Magellan_MLP/MLP_Template_Image_Left.jpg");
+    background-repeat: no-repeat;
+    background-position: top 0 left;
+    background-size: cover;
+    /* filter: brightness(1.1); */
+    position: relative;
+    min-width: 1150px;
+
+
+}
+
+.getstart {
+
+    background-image: linear-gradient(to left, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+    /* border: 2px solid white; */
+    color: azure;
+
+    height: 600px;
+    padding-top: 60px;
+    width: 48%;
+
+    /* padding-left: 30px; */
+    display: flex;
+    flex-direction: column;
+    /* flex-shrink: calc(10*30); */
+
+
+}
+
+.getstart :nth-child(1) {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45px;
+    padding-bottom: 20px;
+    font-family: amazon;
+    /* margin: 20px 0 0 60px; */
+
+}
+
+.getstart :nth-child(2) {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-family: amazon;
+    /* margin: 20px 0 0 60px; */
+    margin-top: 10px;
+}
+
+.getstart :nth-child(3) {
+    width: 300px;
+    height: 35px;
+    font-size: 19px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: amazon2;
+    background-color: #0f79af;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 15px;
+    /* margin: 0px 0 0 60px; */
+    margin-top: 30px;
+}
+
+.img4 {
+
+    width: 50%;
+    height: 600px;
+
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    background-color: #222222;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: amazon;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.footer span {
+
+    color: #0f79af;
+    padding-right: 20px;
+}
+
+.brand {
+    color: #949494;
+    padding: 15px;
+}
+
+@media only screen and (max-width:1280px) {
+    .content1 {
+
+        width: 100%;
+        height: 600px;
+        min-width: 980px;
+
+    }
+
+    .content2 {
+        min-width: 840px;
+        height: 600px;
+    }
+
+    .content3 {
+        min-width: 840px;
+
+    }
+
+    .content4 {
+        min-width: 840px;
+        height: 800px;
+
+    }
+
+    .nav {
+
+        min-width: 980px;
+        height: 34px;
+        display: flex;
+
+    }
+
+    .signin {
+        min-width: 520px;
+    }
+    .rent {
+        min-width: 520px;
+        height: auto;
+    }
+
+    ul {
+        /* min-width: 840px; */
+        margin: auto;
+        padding: 0;
+        justify-content: center;
+        height: 34px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding-right: 19px;
+        line-height: 22px;
+    }
+
+    .logo {
+        font-size: 18px;
+        padding-right: 40px;
+        line-height: 25px;
+    }
+
+    .ri-account-circle-fill {
+        font-size: 28px;
+    }
+
+    .main {
+        min-width: 980px;
+        height: auto;
+    }
+}
+
+/* @media only screen and (max-width:980px) {
+    .content1{
+        width: 112%;
+    }
+    /* .main{
+        
+    } */
+
+@media only screen and (max-width:840px) {
+    .content1 {
+
+        /* width:1150px; */
+
+        min-width: 80%;
+        width: 100%;
+        height: 410px;
+
+    }
+
+    .signin{
+        height: 400px;
+        padding-top: 10px;
+    }
+    .content2 {
+        min-width: 600px;
+        height: 410px;
+    }
+    .rent{
+        height: 400px;
+        padding-top: 10px;
+    }
+
+    .content3 {
+        min-width: 600px;
+
+    }
+
+    .content4 {
+        min-width: 600px;
+        height: 800px;
+
+    }
+
+    .nav {
+
+        width: 100%;
+
+        height: 34px;
+        display: flex;
+        min-width: 980px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 540px) {
+    .signin {
+
+        position: absolute;
+        top: 500px;
+        height: max-content;
+        min-width: 980px;
+        background-image: linear-gradient(to top, black, black, black, black, black, black, black, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+        align-items: center;
+
+    }
+
+    .signin :nth-child(1) {
+        
+        margin: 0;
+    }
+    .signin :nth-child(2) {
+        
+        margin: 0;
+    }
+    .signin :nth-child(3) {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rent {
+
+        position: absolute;
+        top: 500px;
+        height: 400px;
+        min-width: 980px;
+        background-image: linear-gradient(to top, black, black, black, black, black, black, black, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+        align-items: center;
+        
+    }
+
+    .rent :nth-child(1) {
+        
+        margin: 0;
+    }
+    .rent :nth-child(2) {
+        
+        margin: 0 0 15px 0;
+    }
+    .rent :nth-child(3) {
+        
+        margin: 0;
+    }
+
+    .content1 {
+        display: block;
+        position: relative;
+
+        height: 700px;
+    }
+
+    .content2 {
+        display: block;
+        position: relative;
+
+        height: 765px;
+    }
+
+    .channel {
+        
+        position: relative;
+        width: 90%;
+        height: 765px;
+        text-align: center;
+        margin: 130px 50px 10px 50px;
+    }
+
+    .gridimg {
+
+        position: absolute;
+        
+        width: 710px;
+        height: 565px;
+        /* border: 2px solid black; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        margin-right: 0;
+        margin-top: 300px;
+        margin-bottom: 100px;
+    }
+    .content4 {
+        display: block;
+        position: relative;
+
+        height: 700px;
+    }
+
+    .getstart {
+
+        position: absolute;
+        top: 500px;
+        height: 400px;
+        min-width: 980px;
+        background-image: linear-gradient(to top, black, black, black, black, black, black, black, black, black, black, black, rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0));
+        align-items: center;
+    }
+    .getstart :nth-child(2) {
+        
+        text-align: center;
+    }
+
+    .maincontent {
+        height: 1000px;
+        background-color: black;
+        align-items: center;
+    }
+
+}
+
+/* ul se margin hata ke padding dalna h */

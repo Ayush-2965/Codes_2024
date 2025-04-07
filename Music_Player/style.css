@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffe8a9;
+}
+
+
+
+nav ul {
+    display: flex;
+    height: 49px;
+    background-color: black;
+    list-style-type: none;
+    align-items: center;
+    color: azure;
+}
+nav ul li{
+    padding: 0 12px;
+    font-size: 1.2rem;
+}
+.logo{
+     display: flex;
+     align-items: center;
+     font-weight: bolder;
+     font-size: 1.4rem;
+     
+}
+.logo img {
+    width: 33px;
+    padding: 0 8px;
+    margin-right: 8px;
+}
+.container{
+    position: relative;
+    min-height: 75vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    flex-direction: column;
+    background-image: url("image/pngtree-woman-in-colorful-music-sound-wallpaper-image_2894117.jpg");
+    background-repeat: no-repeat;
+    background-size: 63%;
+    background-position: 120%;
+    filter: contrast(2) ;
+    
+    
+}
+.title{
+    margin-bottom: 12px;
+}
+.innercontent{
+        border-radius: 12px;
+        position: absolute;
+       /* background-image: url("gif/bc5743245f004c7ea45cd8a71991c661.gif"); */
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position:10%;
+       top: 0;
+       left: 0;
+       width: 100%;
+       
+       opacity: 0.6;
+       z-index: -1;
+       min-height: 100%;
+       transition: 0.28s ease-in-out;
+}
+
+
+.songitems{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 510px;
+    background-color: white;
+    margin: 8px;
+    border-radius: 45px;
+    position: relative;
+}
+.songitems span{
+    color: black;
+    margin-left: 6px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+.playbutton{
+    cursor: pointer;
+    position: absolute;
+    font-size: 23px;
+    right: 19px;
+}
+.songitems span img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 3px;
+    
+}
+
+.songitems .duration{
+    position: absolute;
+    right: 48px;
+}
+.songlist{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.bottom{
+    position: sticky;
+    height: 100px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    
+}
+
+#starttime{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 0 8px;
+}
+#endtime{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 0 8px;
+}
+.icons{
+    margin-top: 8px;
+    font-size: 40px;
+    
+}
+.icons i{
+    margin-left: 30px;
+    cursor: pointer;
+}
+#progressbar{
+    width: 80vw;
+}
+.songinfo{
+    position: absolute;
+    left: 0;
+    top: 46px;
+    margin-left: 10vw;
+    font-size: 23px;
+    font-weight: 600;
+    
+}
+.songinfo::first-letter{
+    text-transform: uppercase;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate text</title>
+
+    <style>
+        div {
+            animation-name: demo;
+        }
+
+        div {
+            width: 100%;
+            animation-name: demo;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        
+            color: azure;
+            
+            text-decoration: solid;
+            font-style: italic;
+            font-size: 200px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        span{
+            text-decoration: solid;
+            font-style: italic;
+            font-size: 100px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        h1{
+            text-align: center;
+            font-size: 70px;
+        }
+
+        @keyframes demo {
+            0% {
+                color: rgb(151, 165, 42);
+            }
+
+            10% {
+                color: chartreuse;
+            }
+
+            20% {
+                color: rgb(255, 251, 0);
+            }
+
+            30% {
+                color: rgb(205, 242, 168);
+            }
+
+            40% {
+                color: rgb(255, 0, 0);
+            }
+
+            60% {
+                color: rgb(132, 168, 225);
+            }
+
+            70% {
+                color: rgb(0, 38, 255);
+            }
+
+            80% {
+                color: rgb(208, 0, 255);
+            }
+
+            90% {
+                color: rgb(0, 255, 183);
+            }
+
+            100% {
+                color: rgb(0, 5, 7);
+            }
+
+            50% {
+                color: rgb(10, 238, 246);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Thala for a Reason
+
+    </h1>
+    <div>
+        7
+        
+    </div>
+    <span>
+        Dhoni
+    </span>
+
+
+</body>
+
+</html>

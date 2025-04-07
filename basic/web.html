@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul :nth-child(2){
+            font-weight: 600;
+            font-size: 22px;
+            height: 25px;
+            width: 25vw;
+            margin-right: 25%;
+
+        }
+        ul :first-child{
+            font-weight: 600;
+            font-size: 22px;
+            width: 100px;
+            height: 25px;
+            margin-right: 20%;
+        }
+        ul{margin: 20px 0px 0px 25px;
+            /* width: 100%; */
+            height: 40px;
+            display: flex;
+        
+            /* justify-content: space-around; */
+        }
+
+        ul li{
+            list-style-type: none;
+            
+            width: 94px;
+            height: 25px;
+            font-size: 22px;
+            text-align: left;
+            font-weight: 600;
+
+        }
+        ul li:hover{
+            color: rgb(46, 46, 46);
+        }
+        div h2{
+            margin-top: 80px;
+            margin-left: 25px;
+        }
+        div h3{
+           
+            margin-left: 45px;
+            font-size: 20px;
+        }
+        /* straight line in case study line */
+        .thirdline{
+            display: flex;
+            margin: 120px 0px 40px 0px;
+        }
+        .stline{
+            /* border-top: 2px solid black;
+            width: 40px;
+            height: 10px;
+            justify-self: center;
+            font-size: 100px; */
+            display: flex;
+            margin-left: 1550px;
+        }
+        .bar3,.bar1,.bar2{
+            width: 35px;
+            height: 4px;
+            border-top: 4px solid black;
+            margin-top: 5px;
+            align-self: center;
+        }
+
+        div h1{
+            font-size: 100px;
+            margin: 67px 0px 67px 25px;
+
+        }
+        /* lets chat arrow icon */
+        .ri-arrow-right-up-line{
+            font-size: 22px;
+            font-weight: 600;
+            padding-top: 3px;
+        }
+        .arrow{
+            margin-left: 740px;
+            border: 2px solid black;
+            justify-self: end;
+            border-radius: 35px;
+            width: 80px;
+            height: 45px;
+            padding: 10px;
+            text-align: center;
+            justify-self: end;
+
+        }
+        .arrow:hover{
+            background-color: black;
+            color: azure;
+        }
+        /* sketch frameio card */
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 600px 200px;
+            justify-items: center;
+            /* align-items: center; */
+        }
+        .box{
+            /* display: grid;
+            grid-template-columns: 1fr 1fr; */
+            width: 90%;
+            height: 600px;
+            box-shadow: 6px 6px 8px 0 rgba(0,0,0,0.2);
+            /* border: 2px solid black; */
+            background-color: rgba(198, 201, 203, 0.33);
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .box:hover{
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+            transition: 1s;
+        }
+        div img{
+            border-radius: 35px ;
+            
+            width: 900px;
+            height: 700px;
+            translate: 35px 30px;
+        }
+        /* card content */
+        .smallbox{
+            justify-self: start;
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 50px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-rows: 10px 45px 30px;
+            /* grid-template-columns: 1fr 1fr; */
+        }
+        h5{
+            font-size: 20px;
+            font-weight: lighter;
+            color: rgb(111, 114, 115);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <ul>
+                <div>Liyaa</div>
+                <div>Visual & product designer based in estonia and many more</div>
+                <li>Work</li>
+                <li>About</li>
+                <li>Store</li>
+                <li>Let's chat
+                </li>
+                <i class="ri-arrow-right-up-line"></i>
+            </ul>
+        </header>
+    </div>
+    <div>
+        <h2>
+            Hello I'm liyaa
+        </h2>
+    </div>
+    <div>
+        <h1>
+            A multidiscipilanary designer focusing on digital experiences.
+        </h1>
+    </div>
+    <div class="thirdline">
+        
+        <h3>
+            Case studies
+        </h3>
+        <div class="stline">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div style="font-weight: 600;margin-left: 30px;font-size: 20px;">01</div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- sketchcard -->
+        <div class="box">
+            <img src="https://www.sketchappsources.com/resources/source-image/white_Diamond_Sketch.png" alt="white_Diamond_Sketch">
+        </div>
+        <!-- frameio card -->
+        <div class="box">
+            <img src="https://techcrunch.com/wp-content/uploads/2021/08/frame.io-371.jpg" alt="frameio">
+        </div>
+        <!-- card1 content -->
+        <div class="smallbox">
+            
+                Sketch
+                <div class="arrow">
+                    <i class="ri-arrow-right-line"></i>
+                </div>
+                <h5>
+                    content design marketing
+                </h5>
+            
+        </div>
+        <!-- card2 content -->
+        <div class="smallbox">
+            
+                Frame.io
+                <div class="arrow">
+                    <i class="ri-arrow-right-line"></i>
+                </div>
+                <h5>
+                    User Interface Design
+                </h5>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
+
